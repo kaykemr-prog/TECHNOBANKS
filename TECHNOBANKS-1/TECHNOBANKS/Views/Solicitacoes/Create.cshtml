@@ -1,0 +1,41 @@
+@model TECHNOBANKS.Models.Solicitacao
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Nova Solicitação</title>
+    <link rel="stylesheet" href="/css/site.css" />
+</head>
+<body>
+
+<div class="container">
+
+<h2>Nova Solicitação</h2>
+
+<form asp-action="Create" method="post">
+
+    <label>Tipo</label>
+
+    <select asp-for="Tipo">
+        <option>Reparo</option>
+        <option>Novo Semáforo</option>
+    </select>
+
+    <label>Descrição</label>
+
+    <textarea asp-for="Descricao"></textarea>
+
+    <label>Endereço</label>
+
+    <input asp-for="Endereco" />
+
+    <button type="submit">
+        Enviar Solicitação
+    </button>
+
+</form>
+
+</div>
+
+</body>
+</html>

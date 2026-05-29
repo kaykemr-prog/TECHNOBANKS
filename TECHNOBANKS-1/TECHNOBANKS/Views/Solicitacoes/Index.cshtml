@@ -1,0 +1,46 @@
+@model IEnumerable<TECHNOBANKS.Models.Solicitacao>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>TECHNOBANKS</title>
+    <link rel="stylesheet" href="/css/site.css" />
+</head>
+<body>
+
+<div class="container">
+    <h1>TECHNOBANKS</h1>
+    <p>Sistema Inteligente de Solicitações de Semáforos</p>
+
+    <a href="/Solicitacoes/Create" class="btn">
+        Nova Solicitação
+    </a>
+
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Tipo</th>
+                <th>Descrição</th>
+                <th>Endereço</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+
+        <tbody>
+        @foreach(var item in Model)
+        {
+            <tr>
+                <td>@item.Id</td>
+                <td>@item.Tipo</td>
+                <td>@item.Descricao</td>
+                <td>@item.Endereco</td>
+                <td>@item.Status</td>
+            </tr>
+        }
+        </tbody>
+    </table>
+</div>
+
+</body>
+</html>
